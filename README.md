@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A minimalist, elegant, and responsive portfolio website built with **Next.js** and **Typescript** to showcase my web development projects, skills, and contact information.
+A minimalist, elegant, and responsive portfolio website built with **Next.js** and **Typescript** to show what I've been up to.
 
 ---
 
