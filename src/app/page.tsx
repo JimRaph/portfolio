@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills"; 
 import { useTheme } from "./components/Theme";
+import Notebooks from "./components/Notebooks";
 
 
 export default function Home() {
@@ -33,7 +34,7 @@ export default function Home() {
   }
 
   return (
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen cursor-default">
         
         <Sidebar />
 
@@ -45,6 +46,7 @@ export default function Home() {
             <Hero />
             <Skills />
             <Projects />
+            <Notebooks />
             <Contact />
           </main>
           
