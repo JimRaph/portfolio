@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-backg: var(--bg-primary);
+  --color-primary-text: var(--text-primary);
+  --color-accent: var(--accent-color);
+  --color-border-subtle: var(--border-color);
+  
+  --font-serif: 'Playfair Display', serif;
+}
+
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --bg-primary: #FBFBFB; 
+  --text-primary: #1C1C1C; 
+  --accent-color: #003366; 
+  --border-color: #E0E0E0;
+}
+
+.dark {
+  --bg-primary: #050811; 
+  --text-primary: #ECECEC; 
+  --accent-color: #FFC300; 
+  --border-color: #2D3748;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  width: 100%;
+  scroll-behavior: smooth; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700; 
+}
+
+@layer base {
+  *, *::before, *::after {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}

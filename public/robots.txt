@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jimmyesang.vercel.app/sitemap.xml
