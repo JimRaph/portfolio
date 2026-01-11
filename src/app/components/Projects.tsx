@@ -10,6 +10,7 @@ type ProjectLink = {
   live?: string;
   github?: string;
   status?: string; 
+  admin?: string;
 };
 
 type Project = {
@@ -63,7 +64,7 @@ const projectData: Sector[] = [
         tools: ['Python', 'NextJS', 'Airflow', 'ChromaDB', 'Modal', 'Llama 3B', 'Docker', 'CI/CD'],
         links: {
             live: 'https://medifact.vercel.app/',
-            github: 'https://github.com/JimRaph/Health-Info-Rag-Application', 
+            github: 'https://github.com/JimRaph/MediFact', 
             status: 'Live'
         },
         image: "/medifact.png" 
@@ -76,7 +77,7 @@ const projectData: Sector[] = [
         tools: ['Python', 'Flask', 'React', 'Random Forest', 'Docker', 'Fly.io', 'scikit-learn'],
         links: {
             live: 'https://diawatch.fly.dev/',
-            github: 'https://github.com/JimRaph/Data-science-ML/tree/main/Diabetes%20Prediction%20App',
+            github: 'https://github.com/JimRaph/DiaWatch',
             status: 'Live'
         },
         image: "/diabetes.png" 
@@ -111,15 +112,15 @@ const projectData: Sector[] = [
                   and proficiency with modern development tooling.`,
     projects: [
       {
-        title: "Real-Time Social Chat App",
+        title: "EchozChat",
         description: `A full-stack real-time chat application that mirrors 
                       the core experience and interface of WhatsApp. Includes all the 
                       major functionalities, video & audio call support, real-time
                       messaging, etc`,
-        tools: ['React', 'Nodejs', 'Socket.io', 'WebRTC', 'MongoDB', 'Cloudinary', 'TailwindCss', 'Express', 'Multer'],
+        tools: ['React', 'Nodejs', 'Socket.io', 'WebRTC', 'MongoDB', 'Cloudinary', 'TailwindCss', 'Express', 'Multer', 'Render', 'AWS'],
         links: { 
-          live: 'https://whatsappclonefrontend.vercel.app/', 
-          github: 'https://github.com/JimRaph/web-development-portfolio/tree/main/WhatsApp%20Clone', 
+          live: 'https://echozchat.vercel.app/', 
+          github: 'https://github.com/JimRaph/EchozChat', 
           status: 'Live' 
         },
         image: "/social.png"
@@ -130,35 +131,36 @@ const projectData: Sector[] = [
                       application for product/order management.`,
         tools: ['React', 'Nodejs', 'Express', 'MongoDB', 'Cloudinary'],
         links: { 
-          live: '#', 
+          live: 'https://shoplumina.vercel.app/',
+          admin: 'https://shoplumina-admin.vercel.app/', 
           github: 'https://github.com/JimRaph/Lumina', 
           status: 'Live' },
         image: "/sl.png"
       },
       {
-        title: "MyWeb3Journey",
+        title: "JimmyInWeb3",
         description: `A responsive personal portfolio with Web3 branding, 
                       client-side form validation, captcha and integrated email delivery.
                       Detailing my journey in web3`,
         tools: ["Typescript", "Next.js", "Redis", "Resend", "Tailwind","Zod", "Framer"],
         links: { 
           live: 'https://jimmyinweb3.vercel.app/', 
-          github: 'https://github.com/JimRaph/web-development-portfolio/tree/main/Web3-Portfolio/Web3-Portfolio', 
+          github: 'https://github.com/JimRaph/web3-portfolio', 
           status: 'Live' },
         image: "/web3.png"
       },
       {
-        title: "Student Progress Management System ",
+        title: "Codeforces Student Tracker",
         description: `Full-stack management system. Synchronizes Codeforces 
                       data for students including their context history, problem 
                       submissions, and statistics.  It supports automated syncing via 
                       cron job, manual sync trigger, light and dark theme  `,
         tools: ["React","Tailwind","Shadcn","vercel","lucide-react"],
         links: { 
-                live: 'https://student-progress-management-system-dusky.vercel.app/', 
-                github: 'https://github.com/JimRaph/web-development-portfolio/tree/main/Student-Progress-Management-System', 
+                live: 'https://cfst.vercel.app/', 
+                github: 'https://github.com/JimRaph/Codeforces-Student-Tracker', 
                 status: 'Live' },
-        image: "/spms.png"
+        image: "/cfst.png"
       },
       {
         title: "Inventory Management Dashboard",
@@ -166,8 +168,8 @@ const projectData: Sector[] = [
                       Focus on data visualization and robust state management. POC`,
         tools: ['Nextjs', 'Redux Toolkit', 'TypeScript', 'Prisma', 'Recharts', "Nodejs"],
         links: { 
-                live: 'https://inventory-management-dashboard-three.vercel.app/', 
-                github: 'https://github.com/JimRaph/web-development-portfolio/tree/main/Inventory-Management-Dashboard', 
+                live: 'https://inventory-mgmt-dashboard.vercel.app/', 
+                github: 'https://github.com/JimRaph/Inventory-Management-Dashboard', 
                 status: 'Live' },
         image: "/imd.png"
       },
@@ -178,7 +180,7 @@ const projectData: Sector[] = [
         tools: ["React","Tailwind","Shadcn","vercel","lucide-react"],
         links: { 
                 live: 'https://wepay-sigma.vercel.app/', 
-                github: 'https://github.com/JimRaph/web-development-portfolio/tree/main/WePay', 
+                github: 'https://github.com/JimRaph/WePay', 
                 status: 'Live' },
         image: "/wepay.png"
       },
@@ -195,7 +197,7 @@ const allSectors: Sector[] = [
 const Projects = () => {
     const [activeSector, setActiveSector] = useState<Sector>(allSectors[0]);
 
-    const PROJECTS_PER_PAGE = 4;
+    const PROJECTS_PER_PAGE = 6;
     const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
     
     useEffect(() => {
@@ -240,7 +242,7 @@ const Projects = () => {
         </p>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {projectsToDisplay.map((project, idx) => (
             <div key={idx} className="relative rounded-lg overflow-hidden border border-border-subtle transition-all duration-300 group bg-backg">
               
@@ -282,7 +284,13 @@ const Projects = () => {
                   {project.links.live && (
                     <a href={project.links.live} target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1 text-sm text-accent hover:opacity-70 transition-opacity">
-                      <FaExternalLinkAlt className="text-sm" /> Live Demo
+                      <FaExternalLinkAlt className="text-sm" /> Live 
+                    </a>
+                  )}
+                  {project.links.admin && (
+                    <a href={project.links.admin} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-accent hover:opacity-70 transition-opacity">
+                      <FaExternalLinkAlt className="text-sm" /> Admin 
                     </a>
                   )}
                   {!project.links.live && !project.links.github && (
