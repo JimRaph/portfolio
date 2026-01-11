@@ -179,7 +179,7 @@ const projectData: Sector[] = [
                       at optimizing and managing Human Resources (HR) pipelines POC`,
         tools: ["React","Tailwind","Shadcn","vercel","lucide-react"],
         links: { 
-                live: 'https://wepay-sigma.vercel.app/', 
+                live: 'https://wepay-seven.vercel.app/', 
                 github: 'https://github.com/JimRaph/WePay', 
                 status: 'Live' },
         image: "/wepay.png"
