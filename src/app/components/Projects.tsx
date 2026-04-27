@@ -72,11 +72,11 @@ const projectData: Sector[] = [
       {
         title: "DiaWatch",
         description: `A full-stack ML app (Random Forest/Logistic Regression) allowing users to check 
-                      diabetes risk based on medical inputs. Backend built with Flask, deployed via Fly.io, 
+                      diabetes risk based on medical inputs. Backend built with Flask, deployed via Vercel, 
                       and frontend in React/Tailwind.`,
-        tools: ['Python', 'Flask', 'React', 'Random Forest', 'Docker', 'Fly.io', 'scikit-learn'],
+        tools: ['Python', 'Flask', 'React', 'Random Forest', 'Docker', 'Vercel', 'scikit-learn'],
         links: {
-            live: 'https://diawatch.fly.dev/',
+            live: 'https://diawatch.vercel.app/',
             github: 'https://github.com/JimRaph/DiaWatch',
             status: 'Live'
         },
