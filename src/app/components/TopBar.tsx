@@ -18,7 +18,6 @@ const TopBar = () => {
                     <BiSolidDownload size={18} />
                     <a target='_blank' rel='noopener noreferrer' 
                         className='pt-0.5'
-                        {/* href={CV_DOWNLOAD_URL} */}
                         href="/Jimmy_ML_CV.pdf"
                     >
                         View CV
