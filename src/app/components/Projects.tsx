@@ -58,9 +58,9 @@ const projectData: Sector[] = [
     projects: [
       {
         title: "MediFact",
-        description: `Full-stack RAG project. Automated data pipeline (scrapping, cleaning, chunking) 
-                      using Airflow, ChromaDB, and AWS S3. Built a chat application using NextJS connected to a Llama 3B 
-                      model deployed via Modal/FastAPI.`,
+        description: `Full-stack RAG project. Automated data pipeline (scrape, clean, chunk, vectorize) 
+                      using Airflow, ChromaDB, and AWS S3. Built a chat application on NextJS connected to a Llama 3B 
+                      model deployed via Modal Cloud Service/FastAPI, with streaming support.`,
         tools: ['Python', 'NextJS', 'Airflow', 'ChromaDB', 'Modal', 'Llama 3B', 'Docker', 'CI/CD'],
         links: {
             live: 'https://medifact.vercel.app/',
@@ -71,10 +71,11 @@ const projectData: Sector[] = [
       },
       {
         title: "DiaWatch",
-        description: `A full-stack ML app (Random Forest/Logistic Regression) allowing users to check 
-                      diabetes risk based on medical inputs. Backend built with Flask, deployed via Vercel, 
-                      and frontend in React/Tailwind.`,
-        tools: ['Python', 'Fastapi', 'Next.js', 'CatBoosst', 'Docker', 'Vercel', 'scikit-learn', 'MLflow', 'Evidently'],
+        description: `An AI-powered diabetes risk assessment platform that analyzes clinical and lifestyle factors to predict
+                      diabetes risk levels, track health habits, and provide personalized, actionable recommendations.. 
+                      Built on NHANES epidemiological data with production-grade MLOps infrastructure, with custom threshold for
+                      high recall.`,
+        tools: ['Python', 'Fastapi', 'Next.js', 'CatBoost', 'Docker', 'Vercel', 'scikit-learn', 'MLflow', 'DagsHub', 'Evidently'],
         links: {
             live: 'https://diawatch.vercel.app/',
             github: 'https://github.com/JimRaph/DiaWatch',
