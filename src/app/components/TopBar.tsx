@@ -5,7 +5,7 @@ import { BiSolidDownload } from 'react-icons/bi';
 
 const TopBar = () => {
     const { isDark, toggleDarkMode } = useTheme();
-    const CV_DOWNLOAD_URL = process.env.NEXT_PUBLIC_CV_URL;
+    // const CV_DOWNLOAD_URL = process.env.NEXT_PUBLIC_CV_URL;
 
     return (
         <header className='sticky top-0 z-40 p-4 border-b border-border-subtle bg-backg'>
@@ -18,9 +18,10 @@ const TopBar = () => {
                     <BiSolidDownload size={18} />
                     <a target='_blank' rel='noopener noreferrer' 
                         className='pt-0.5'
-                        href={CV_DOWNLOAD_URL}
+                        {/* href={CV_DOWNLOAD_URL} */}
+                        href="/Jimmy_ML_CV.pdf"
                     >
-                        Download CV
+                        View CV
                     </a>
                 </button>
 
