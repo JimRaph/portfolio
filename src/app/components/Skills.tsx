@@ -7,9 +7,9 @@ const skillGroups = [
   {
     icon: FaBrain,
     title: "AI/ML Engineering Depth",
-    description: `Building, training, and deploying intelligent models. 
-    Focus on Retrieval-Augmented Generation (RAG), predictive analytics, and data optimization. `,
-    skills: ['Python', 'RAG', 'LLMs', 'TensorFlow/PyTorch', 'Vector DBs', 'FastAPI', 'PowerBI']
+    description: `Building, training, and deploying Machine Learning Models and Intelligent systems leveraging 
+    LLMs and AI APIs.`,
+    skills: ['Python', 'RAG', 'LLMs', 'TensorFlow/PyTorch', 'VectorDBs', 'FastAPI', 'PowerBI']
   },
   {
     icon: FaCode,
